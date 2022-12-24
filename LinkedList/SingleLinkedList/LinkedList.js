@@ -63,6 +63,7 @@ export default class LinkedList {
       current.next = node;
     }
     this.size++;
+    console.log(this.head);
   }
 
   // insert a node at a prticular index
@@ -154,21 +155,21 @@ const myLL = new LinkedList();
 
 myLL.append(10);
 myLL.append(20);
-myLL.append(30);
-myLL.append(40);
-myLL.append(50);
+// myLL.append(30);
+// myLL.append(40);
+// myLL.append(50);
 
-console.log(myLL.getSize());
-myLL.print();
+// console.log(myLL.getSize());
+// myLL.print();
 
-myLL.insert(2, 200);
-myLL.insert(-2, 200);
-myLL.insert(6, 200);
-myLL.insert(5, 250);
+// myLL.insert(2, 200);
+// myLL.insert(-2, 200);
+// myLL.insert(6, 200);
+// myLL.insert(5, 250);
 
-myLL.print();
+// myLL.print();
 
-myLL.remove(6);
-myLL.print();
-myLL.remove(2);
-myLL.print();
+// myLL.remove(6);
+// myLL.print();
+// myLL.remove(2);
+// myLL.print();
