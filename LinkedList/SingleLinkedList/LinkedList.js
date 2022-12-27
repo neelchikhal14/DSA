@@ -63,7 +63,7 @@ export default class LinkedList {
         current = current.next;
       }
 
-      console.log('current', current);
+      // console.log('current', current);
       current.next = node;
     }
     this.size++;
