@@ -39,17 +39,48 @@
  * @return {boolean}
  */
 var isPalindrome = function (head) {
+  let palindromeResult = true;
+
   // only one node or empty LL
   if (head === null || head.next === null) return true;
 
-  //find middle of linked list
+  // Step-1 find middle of linked list
   let slowPtr = head,
     fastPtr = head;
-  while (fastPtr && fastPtr.next) {
+  while (fastPtr && fastPtr.next && fastPtr.next) {
     slowPtr = slowPtr.next;
     fastPtr = fastPtr.next.next;
   }
 
-  // reverse the right half
-  
+  // Step-2 reverse the right half
+  let tempCurr = slowPtr,
+    tempPrev = null,
+    tempNext = null;
+
+  while (tempCurr !== null) {
+    // save the next node of current
+    tempNext = tempCurr.next;
+    // break the original link
+    tempCurr.next = tempPrev;
+    // move pointers ahead
+    tempPrev = tempCurr;
+    tempCurr = tempNext;
+  }
+
+  // change the head
+  let reverseHead = tempPrev;
+
+  // Step-3 Move slow to right half
+
+  // Ste-4 compare left and right half of linked list
+  while (reverseHead !== null) {
+    if (head.val !== reverseHead.val) return false;
+
+    // increase head
+    head = head.next;
+    // increase slowPtr
+    reverseHead = reverseHead.next;
+  }
+
+  return palindromeResult;
 };

@@ -7,6 +7,10 @@ export default class LinkedList {
     this.size = 0;
   }
 
+  getHead() {
+    return this.head;
+  }
+
   /**
    * Checks if LL is empty or not
    * @return boolean
@@ -138,7 +142,7 @@ export default class LinkedList {
   }
 }
 
-const myLL = new LinkedList();
+// const myLL = new LinkedList();
 // console.log(`Is the list Empty - ${myLL.isEmpty()}`);
 // console.log(`The size of LL is- ${myLL.getSize()}`);
 // // myLL.print();
@@ -153,8 +157,8 @@ const myLL = new LinkedList();
 
 // myLL.print();
 
-myLL.append(10);
-myLL.append(20);
+// myLL.append(10);
+// myLL.append(20);
 // myLL.append(30);
 // myLL.append(40);
 // myLL.append(50);
