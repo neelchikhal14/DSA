@@ -58,7 +58,7 @@ var removeNthFromEnd = function (head, n) {
 
   let resultHead = dummyHead;
 
-  let counter = 0;
+  let count = 0;
 
   let tail = head;
 

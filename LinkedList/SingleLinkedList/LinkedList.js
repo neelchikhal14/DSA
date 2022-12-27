@@ -67,7 +67,7 @@ export default class LinkedList {
       current.next = node;
     }
     this.size++;
-    console.log(this.head);
+    // console.log(this.head);
   }
 
   // insert a node at a prticular index
