@@ -3,8 +3,8 @@
 // Node is collection of data and pointer to next node
 
 export default class LinkedListNode {
-  constructor(value) {
-    this.value = value;
+  constructor(val) {
+    this.val = val;
     this.next = null; // next points to next node
   }
 

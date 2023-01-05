@@ -1,4 +1,4 @@
-import LLNode from './LinkedListNode.js';
+import LLNode from "./LinkedListNode.js";
 
 export default class LinkedList {
   constructor() {
@@ -74,9 +74,9 @@ export default class LinkedList {
   insert(idx, value) {
     const node = new LLNode(value);
     if (idx < 0 || idx >= this.size) {
-      console.log('Invalid Index, Out of range');
+      console.log("Invalid Index, Out of range");
     } else if (this.size === 0 && idx > 0) {
-      console.log('invalid index, LL is empty, idx cannot be greater than 0');
+      console.log("invalid index, LL is empty, idx cannot be greater than 0");
     } else if (idx === 0) {
       this.prepend(value);
     } else if (idx === this.size - 1) {
@@ -98,9 +98,9 @@ export default class LinkedList {
   // remove a node at a prticular index
   remove(idx) {
     if (idx < 0 || idx >= this.size) {
-      console.log('Invalid Index, Out of range');
+      console.log("Invalid Index, Out of range");
     } else if (this.size === 0 && idx > 0) {
-      console.log('invalid index, LL is empty, idx cannot be greater than 0');
+      console.log("invalid index, LL is empty, idx cannot be greater than 0");
     } else if (idx === 0) {
       this.head = null;
       this.size = 0;
@@ -126,17 +126,17 @@ export default class LinkedList {
   // printing the linked list
   print() {
     if (this.isEmpty()) {
-      console.log('List is empty');
+      console.log("List is empty");
     } else {
       let current = this.head;
 
-      let listValues = '';
+      let listValues = "";
 
       while (current.next !== null) {
-        listValues += `${current.value} -> `;
+        listValues += `${current.val} -> `;
         current = current.next;
       }
-      listValues += `${current.value}  `;
+      listValues += `${current.val}  `;
       console.log(listValues);
     }
   }
